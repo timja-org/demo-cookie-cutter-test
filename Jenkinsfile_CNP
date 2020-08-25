@@ -1,0 +1,11 @@
+#!groovy
+
+@Library("Infrastructure")
+
+def type = "java"
+def product = "cookies"
+def component = "cutting"
+
+withPipeline(type, product, component) {
+    disableLegacyDeployment()
+}
